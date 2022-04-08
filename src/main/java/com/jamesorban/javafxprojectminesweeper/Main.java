@@ -2,6 +2,8 @@ package com.jamesorban.javafxprojectminesweeper;
 
 import java.io.IOException;
 
+import com.jamesorban.javafxprojectminesweeper.controllers.MinesController;
+import com.jamesorban.javafxprojectminesweeper.models.Mines;
 import javafx.application.Application;
 import javafx.event.ActionEvent;
 import javafx.event.EventHandler;
@@ -20,7 +22,7 @@ import javafx.scene.text.Text;
 import javafx.stage.Modality;
 import javafx.stage.Stage;
 import javafx.stage.StageStyle;
-import com.jamesorban.javafxprojectminesweeper.Mines.Point;
+import com.jamesorban.javafxprojectminesweeper.models.Mines.Point;
 
 public class Main extends Application {
 
@@ -36,7 +38,7 @@ public class Main extends Application {
 
     private GridPane gloabalGrid;
 
-    private Controller controller;
+    private MinesController minesController;
 
     private Mines mine;
     private Button[][] buttonsBoard;
@@ -61,9 +63,9 @@ public class Main extends Application {
         Scene scene;
         try {
             FXMLLoader loader = new FXMLLoader();
-            loader.setLocation(getClass().getResource("GUI.fxml"));
+            loader.setLocation(getClass().getResource("views/Mines.fxml"));
             root1 = loader.load();
-            controller = loader.getController();
+            minesController = loader.getController();
 
         } catch (IOException e) {
             e.printStackTrace();
@@ -71,15 +73,15 @@ public class Main extends Application {
         }
         yes_no_FLAG = false;
         // set pointers to all of my controller data.
-        btnReset = controller.getBtnReset();
+        btnReset = minesController.getBtnReset();
 
-        txtWidth = controller.getTxtWidth();
-        txtHeight = controller.getTxtHeight();
-        txtMines = controller.getTxtMines();
+        txtWidth = minesController.getTxtWidth();
+        txtHeight = minesController.getTxtHeight();
+        txtMines = minesController.getTxtMines();
 
-        gloabalGrid = controller.getGlobalGrid();
-        boardGrid = controller.getBoardGrid();
-        topPane = controller.getDataPane();
+        gloabalGrid = minesController.getGlobalGrid();
+        boardGrid = minesController.getBoardGrid();
+        topPane = minesController.getDataPane();
 
         // TO DELETE //
         txtWidth.setText("11");

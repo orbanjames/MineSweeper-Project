@@ -1,4 +1,4 @@
-package com.jamesorban.javafxprojectminesweeper;
+package com.jamesorban.javafxprojectminesweeper.models;
 
 import java.util.HashSet;
 import java.util.Iterator;
