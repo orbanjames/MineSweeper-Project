@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<?import javafx.scene.image.ImageView?>
+<StackPane xmlns="http://javafx.com/javafx"
+           xmlns:fx="http://javafx.com/fxml"
+           fx:controller="com.jamesorban.javafxprojectminesweeper.models.UserAccount"
+           prefHeight="600.0" prefWidth="600.0">
+<children>
+    <TextField fx:id="name" layoutX="282.0" layoutY="207.0" />
+    <Label layoutX="191.0" layoutY="213.0" text="Name"/>
+    <Label layoutX="191.0" layoutY="253.0" text="Email"/>
+    <TextField fx:id="email" layoutX="282.0" layoutY="247.0"/>
+    <Label layoutX="192.0" layoutY="297.0" prefWidth="52.0" text="Password"/>
+    <PasswordField fx:id="password" layoutX="282.0" layoutY="291.0"/>
+    <Button id="submitButton" layoutX="377.0" layoutY="334.0" mnemonicParsing="false" onAction="#getData" text="Submit"/>
+    <ImageView fitHeight="150.0" layoutX="200.0" layoutY="26.0" pickOnBounds="true" preserveRatio="true"/>
+</children>
+</StackPane>
