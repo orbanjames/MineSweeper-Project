@@ -7,18 +7,15 @@ import java.util.Set;
 
 public class Mines {
 
-    private int height;
-    private int width;
-    private int numMines;
+    private final int height;
+    private final int width;
     private boolean showAll;
 
-    private Point gameBoard[][];
-    private Random rnd = new Random();
+    private final Point[][] gameBoard;
 
     public Mines(int height, int width, int numMines) {
         this.height = height;
         this.width = width;
-        this.numMines = numMines;
         this.showAll = false;
         gameBoard = new Point[height][width];
         for (int i = 0; i < height; i++) {
@@ -27,7 +24,8 @@ public class Mines {
             }
         }
         int count = 0;
-        while (count < this.numMines) {
+        while (count < numMines) {
+            Random rnd = new Random();
             int x = rnd.nextInt(height);
             int y = rnd.nextInt(width);
             if (!gameBoard[x][y].isMine) {
@@ -44,12 +42,11 @@ public class Mines {
 
     }
 
-    public boolean addMine(int i, int j) {
+    public void addMine(int i, int j) {
         if (gameBoard[i][j].isMine) {
-            return false;
+            return;
         }
         gameBoard[i][j].isMine = true;
-        return true;
     }
 
     public boolean open(int i, int j) {
@@ -72,16 +69,6 @@ public class Mines {
         }
         return true;
     }
-
-//	public void OpenNeighburs(int x,int y){
-//		gameBoard[x][y].isOpen=true;
-//		if(gameBoard[x][y].getCountOfMinesArround()==0) {
-//			for (Point p : gameBoard[x][y].neighbours) {
-//				if(!p.isOpen)
-//					OpenNeighburs(p.x, p.y);
-//			}
-//		}
-//	}
 
     public void toggleFlag(int x, int y) {
         gameBoard[x][y].isFlag = !gameBoard[x][y].isFlag;
