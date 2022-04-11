@@ -20,7 +20,7 @@ public class UserAccount {
         String user = "postgres";
         String password = "postgres";
 
-        String username = userName;
+        String name = userName;
         String email = userEmail;
         String pass = userPassword;
 
