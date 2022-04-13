@@ -56,17 +56,17 @@ public class MinesController {
 
     @FXML // This method is called by the FXMLLoader when initialization is complete
     void initialize() {
-        assert globalGrid != null : "fx:id=\"globalGrid\" was not injected: check your FXML file 'Mines.fxml'.";
-        assert boardGrid != null : "fx:id=\"boardGrid\" was not injected: check your FXML file 'Mines.fxml'.";
-        assert dataPane != null : "fx:id=\"dataPane\" was not injected: check your FXML file 'Mines.fxml'.";
-        assert btnReset != null : "fx:id=\"btnReset\" was not injected: check your FXML file 'Mines.fxml'.";
-        assert cancelButton != null : "fx:id=\"cancelButton\" was not injected: check your FXML file 'Mines.fxml'.";
-        assert lblHeight != null : "fx:id=\"lblHeight\" was not injected: check your FXML file 'Mines.fxml'.";
-        assert lblMines != null : "fx:id=\"lblMines\" was not injected: check your FXML file 'Mines.fxml'.";
-        assert txtWidth != null : "fx:id=\"txtWidth\" was not injected: check your FXML file 'Mines.fxml'.";
-        assert txtHeight != null : "fx:id=\"txtHeight\" was not injected: check your FXML file 'Mines.fxml'.";
-        assert txtMines != null : "fx:id=\"txtMines\" was not injected: check your FXML file 'Mines.fxml'.";
-        assert lblWidth != null : "fx:id=\"lblWidth\" was not injected: check your FXML file 'Mines.fxml'.";
+        assert globalGrid != null : "fx:id=\"globalGrid\" was not injected: check your FXML file 'Views.fxml'.";
+        assert boardGrid != null : "fx:id=\"boardGrid\" was not injected: check your FXML file 'Views.fxml'.";
+        assert dataPane != null : "fx:id=\"dataPane\" was not injected: check your FXML file 'Views.fxml'.";
+        assert btnReset != null : "fx:id=\"btnReset\" was not injected: check your FXML file 'Views.fxml'.";
+        assert cancelButton != null : "fx:id=\"cancelButton\" was not injected: check your FXML file 'Views.fxml'.";
+        assert lblHeight != null : "fx:id=\"lblHeight\" was not injected: check your FXML file 'Views.fxml'.";
+        assert lblMines != null : "fx:id=\"lblMines\" was not injected: check your FXML file 'Views.fxml'.";
+        assert txtWidth != null : "fx:id=\"txtWidth\" was not injected: check your FXML file 'Views.fxml'.";
+        assert txtHeight != null : "fx:id=\"txtHeight\" was not injected: check your FXML file 'Views.fxml'.";
+        assert txtMines != null : "fx:id=\"txtMines\" was not injected: check your FXML file 'Views.fxml'.";
+        assert lblWidth != null : "fx:id=\"lblWidth\" was not injected: check your FXML file 'Views.fxml'.";
 
     }
 

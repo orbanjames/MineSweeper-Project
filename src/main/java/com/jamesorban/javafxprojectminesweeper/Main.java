@@ -55,7 +55,7 @@ public class Main extends Application {
         MinesController minesController;
         try {
             FXMLLoader loader = new FXMLLoader();
-            loader.setLocation(getClass().getResource("views/Mines.fxml"));
+            loader.setLocation(getClass().getResource("Views.fxml"));
             root1 = loader.load();
             minesController = loader.getController();
 
