@@ -26,26 +26,17 @@ import com.jamesorban.javafxprojectminesweeper.models.Mines.Point;
 
 public class Main extends Application {
 
-    private Button btnReset;
-    private Button btnExit;
-
     private TextField txtWidth;
     private TextField txtHeight;
     private TextField txtMines;
 
     private GridPane boardGrid;
-    private Pane topPane;
-
-    private GridPane gloabalGrid;
-
-    private MinesController minesController;
 
     private Mines mine;
     private Button[][] buttonsBoard;
 
     private int width;
     private int height;
-    private int minesNumber;
 
     private boolean yes_no_FLAG;
 
@@ -61,6 +52,7 @@ public class Main extends Application {
 
         StackPane root1;
         Scene scene;
+        MinesController minesController;
         try {
             FXMLLoader loader = new FXMLLoader();
             loader.setLocation(getClass().getResource("views/Mines.fxml"));
@@ -73,23 +65,23 @@ public class Main extends Application {
         }
         yes_no_FLAG = false;
         // set pointers to all of my controller data.
-        btnReset = minesController.getBtnReset();
+        Button btnReset = minesController.getBtnReset();
 
         txtWidth = minesController.getTxtWidth();
         txtHeight = minesController.getTxtHeight();
         txtMines = minesController.getTxtMines();
 
-        gloabalGrid = minesController.getGlobalGrid();
+        GridPane gloabalGrid = minesController.getGlobalGrid();
         boardGrid = minesController.getBoardGrid();
-        topPane = minesController.getDataPane();
+        Pane topPane = minesController.getDataPane();
 
         // TO DELETE //
         txtWidth.setText("11");
         txtHeight.setText("11");
         txtMines.setText("11");
 
-        /*************** set exit button *****************/
-        btnExit = new Button();
+     //   /*************** set exit button *****************/
+        Button btnExit = new Button();
         btnExit.setPrefSize(32, 32);
         btnExit.relocate(10, 10);
 
@@ -100,9 +92,6 @@ public class Main extends Application {
                 ((Stage) (((Button) event.getSource()).getScene().getWindow())).close();
             }
         });
-
-
-        /*************** set reset button *****************/
 
         btnReset.setOnAction(new EventHandler<ActionEvent>() {
             @Override
@@ -139,7 +128,7 @@ public class Main extends Application {
                     switch (currentPoint.getCountOfMinesArround()) {
                         case 0: {
                             buttonsBoard[i][j].setStyle(""
-                                    + "-fx-background-color:white");
+                                    + "-fx-background-color:black");
                         }
                         break;
                         case 1: {
@@ -203,7 +192,7 @@ public class Main extends Application {
         height = Integer.parseInt(txtHeight.getText());
         boardGrid.setPrefWidth(850);
         boardGrid.setPrefHeight(650);
-        minesNumber = Integer.parseInt(txtMines.getText());
+        int minesNumber = Integer.parseInt(txtMines.getText());
         mine = new Mines(width, height, minesNumber);
         mine.setShowAll(true);
         mine.setShowAll(false);
@@ -264,7 +253,7 @@ public class Main extends Application {
             }
             break;
             case "lose": {
-                createPopUpMessage("Your are a loser !!! go home..", "lose");
+                createPopUpMessage("You are a looser !!! Reset or cancel..", "lose");
             }
             break;
         }
@@ -276,8 +265,6 @@ public class Main extends Application {
 
     private void createPopUpMessage(String messege, String type) {
         // return true to create new game , and false to back.
-        // type = 'wrong' for empty values , 'win' for winner image , 'lose' for losser
-        // image.
         yes_no_FLAG = false;
 
         final Stage dialog = new Stage();
