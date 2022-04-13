@@ -2,14 +2,18 @@ package com.jamesorban.javafxprojectminesweeper.controllers;
 
 import java.net.URL;
 import java.util.ResourceBundle;
+
+import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import javafx.scene.control.TextField;
 import javafx.scene.layout.GridPane;
 import javafx.scene.layout.Pane;
+import javafx.stage.Stage;
 
 public class MinesController {
+
 
     @FXML // ResourceBundle that was given to the FXMLLoader
     private ResourceBundle resources;
@@ -28,6 +32,9 @@ public class MinesController {
 
     @FXML // fx:id="btnReset"
     private Button btnReset; // Value injected by FXMLLoader
+
+    @FXML// fx:id="Cancel"
+    private Button cancelButton;
 
     @FXML // fx:id="lblHeight"
     private Label lblHeight; // Value injected by FXMLLoader
@@ -53,6 +60,7 @@ public class MinesController {
         assert boardGrid != null : "fx:id=\"boardGrid\" was not injected: check your FXML file 'Mines.fxml'.";
         assert dataPane != null : "fx:id=\"dataPane\" was not injected: check your FXML file 'Mines.fxml'.";
         assert btnReset != null : "fx:id=\"btnReset\" was not injected: check your FXML file 'Mines.fxml'.";
+        assert cancelButton != null : "fx:id=\"cancelButton\" was not injected: check your FXML file 'Mines.fxml'.";
         assert lblHeight != null : "fx:id=\"lblHeight\" was not injected: check your FXML file 'Mines.fxml'.";
         assert lblMines != null : "fx:id=\"lblMines\" was not injected: check your FXML file 'Mines.fxml'.";
         assert txtWidth != null : "fx:id=\"txtWidth\" was not injected: check your FXML file 'Mines.fxml'.";
@@ -78,6 +86,8 @@ public class MinesController {
         return btnReset;
     }
 
+    public Button getCancelButton() {return cancelButton;}
+
     public TextField getTxtWidth() {
         return txtWidth;
     }
@@ -88,6 +98,11 @@ public class MinesController {
 
     public TextField getTxtMines() {
         return txtMines;
+    }
+
+    public void cancelButtonOnAction(ActionEvent e) {
+        Stage stage = (Stage) cancelButton.getScene().getWindow();
+        stage.close();
     }
 
 }
