@@ -1,6 +1,6 @@
 #SOFTWARE-PROCESS-JAVAFX-PROJECT
 
-This is a project work for the course title: Advanced Software Technologies on Master studies submitted in the Department of Software Engineering and Computer Science, Faculty of Organisational Sciences, UNIVERSITY OF BELGRADE, SERBIA. It is my first project experience fully implemented using JavaFX-framework in java Programming Language. It is a desktop game application.
+This is a project work for the course title: SOFTWARE PROCESS (M09240) on Master studies submitted in the Department of Software Engineering and Computer Science, Faculty of Organisational Sciences, UNIVERSITY OF BELGRADE, SERBIA. It is my first project experience fully implemented using JavaFX-framework in java Programming Language. It is a desktop game application.
 
 The following functions can be executed on the web page after successfully connecting and running the application:
 
