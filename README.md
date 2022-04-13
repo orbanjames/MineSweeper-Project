@@ -1,6 +1,6 @@
 #SOFTWARE-PROCESS-JAVAFX-PROJECT
 
-This is a project work for the course title: Advanced Software Technologies on Master studies submitted in the Department of Software Engineering and Computer Science, Faculty of Organisational Sciences, UNIVERSITY OF BELGRADE, SERBIA. It is an additional experience using spring boot-2/ spring-framework-5 fully implemented using java Programming Language. The application is more of a CRUD application with some additional logics added to implements the pie chart for completed and in progress projects.
+This is a project work for the course title: Advanced Software Technologies on Master studies submitted in the Department of Software Engineering and Computer Science, Faculty of Organisational Sciences, UNIVERSITY OF BELGRADE, SERBIA. It is my first project experience fully implemented using JavaFX-framework in java Programming Language. It is a desktop game application.
 
 The following functions can be executed on the web page after successfully connecting and running the application:
 
