@@ -2,8 +2,8 @@ package com.jamesorban.javafxprojectminesweeper;
 
 import java.io.IOException;
 
-import com.jamesorban.javafxprojectminesweeper.controllers.MinesController;
-import com.jamesorban.javafxprojectminesweeper.models.Mines;
+import com.jamesorban.javafxprojectminesweeper.controllers.MenuController;
+import com.jamesorban.javafxprojectminesweeper.models.MineSweeperModel;
 import javafx.application.Application;
 import javafx.event.ActionEvent;
 import javafx.event.EventHandler;
@@ -22,7 +22,7 @@ import javafx.scene.text.Text;
 import javafx.stage.Modality;
 import javafx.stage.Stage;
 import javafx.stage.StageStyle;
-import com.jamesorban.javafxprojectminesweeper.models.Mines.Point;
+import com.jamesorban.javafxprojectminesweeper.models.MineSweeperModel.Point;
 
 public class Main extends Application {
 
@@ -32,7 +32,7 @@ public class Main extends Application {
 
     private GridPane boardGrid;
 
-    private Mines mine;
+    private MineSweeperModel mine;
     private Button[][] buttonsBoard;
 
     private int width;
@@ -52,12 +52,12 @@ public class Main extends Application {
 
         StackPane root1;
         Scene scene;
-        MinesController minesController;
+        MenuController menuController;
         try {
             FXMLLoader loader = new FXMLLoader();
-            loader.setLocation(getClass().getResource("Views.fxml"));
+            loader.setLocation(getClass().getResource("BoardView.fxml"));
             root1 = loader.load();
-            minesController = loader.getController();
+            menuController = loader.getController();
 
         } catch (IOException e) {
             e.printStackTrace();
@@ -65,15 +65,15 @@ public class Main extends Application {
         }
         yes_no_FLAG = false;
         // set pointers to all of my controller data.
-        Button btnReset = minesController.getBtnReset();
+        Button btnReset = menuController.getBtnReset();
 
-        txtWidth = minesController.getTxtWidth();
-        txtHeight = minesController.getTxtHeight();
-        txtMines = minesController.getTxtMines();
+        txtWidth = menuController.getTxtWidth();
+        txtHeight = menuController.getTxtHeight();
+        txtMines = menuController.getTxtMines();
 
-        GridPane gloabalGrid = minesController.getGlobalGrid();
-        boardGrid = minesController.getBoardGrid();
-        Pane topPane = minesController.getDataPane();
+        GridPane gloabalGrid = menuController.getGlobalGrid();
+        boardGrid = menuController.getBoardGrid();
+        Pane topPane = menuController.getDataPane();
 
         // TO DELETE //
         txtWidth.setText("11");
@@ -193,7 +193,7 @@ public class Main extends Application {
         boardGrid.setPrefWidth(850);
         boardGrid.setPrefHeight(650);
         int minesNumber = Integer.parseInt(txtMines.getText());
-        mine = new Mines(width, height, minesNumber);
+        mine = new MineSweeperModel(width, height, minesNumber);
         mine.setShowAll(true);
         mine.setShowAll(false);
         buttonsBoard = new Button[width][height];

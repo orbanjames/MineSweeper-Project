@@ -5,7 +5,7 @@ import java.util.Iterator;
 import java.util.Random;
 import java.util.Set;
 
-public class Mines {
+public class MineSweeperModel {
 
     private final int height;
     private final int width;
@@ -13,7 +13,7 @@ public class Mines {
 
     private final Point[][] gameBoard;
 
-    public Mines(int height, int width, int numMines) {
+    public MineSweeperModel(int height, int width, int numMines) {
         this.height = height;
         this.width = width;
         this.showAll = false;
@@ -200,7 +200,7 @@ public class Mines {
     }
 
     public static void main(String[] args) {
-        Mines m = new Mines(3, 4, 0);
+        MineSweeperModel m = new MineSweeperModel(3, 4, 0);
         m.addMine(0,1);
         m.addMine(2, 3);
         System.out.println(m.open(2, 0));
