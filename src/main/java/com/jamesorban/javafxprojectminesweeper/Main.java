@@ -75,7 +75,7 @@ public class Main extends Application {
         boardGrid = menuController.getBoardGrid();
         Pane topPane = menuController.getDataPane();
 
-        // TO DELETE //
+        // Default start //
         txtWidth.setText("11");
         txtHeight.setText("11");
         txtMines.setText("11");

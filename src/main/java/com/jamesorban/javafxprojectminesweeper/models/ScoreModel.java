@@ -9,11 +9,7 @@ import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
 
-/**
- * Model component of top scores list
- *
- * @author Anthony Colon, Sujay Patel
- */
+
 public class ScoreModel implements Serializable {
     private static final String FILENAME = "scores.bin";
     private static final long serialVersionUID = 1L;
@@ -21,9 +17,7 @@ public class ScoreModel implements Serializable {
 
     private List<userScore> scoreList;
 
-    /**
-     * Constructor loads the old score file or sets a new list if it has not been created
-     */
+
     @SuppressWarnings("unchecked")	//we are sure this is going to be a List
     public ScoreModel() {
         try {

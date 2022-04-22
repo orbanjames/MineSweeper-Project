@@ -10,7 +10,7 @@ import java.sql.PreparedStatement;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 
-public class UserAccount {
+public class DbConnection {
     public PasswordField password;
     public TextField email;
     public TextField name;
@@ -34,7 +34,7 @@ public class UserAccount {
             pst.executeUpdate();
             System.out.println("successfully created");
         } catch (SQLException ex) {
-            Logger lgr = Logger.getLogger(UserAccount.class.getName());
+            Logger lgr = Logger.getLogger(DbConnection.class.getName());
             lgr.log(Level.SEVERE, ex.getMessage(), ex);
         }
 
