@@ -1,6 +1,6 @@
 package com.jamesorban.javafxprojectminesweeper.controllers;
 
-import com.jamesorban.javafxprojectminesweeper.models.UserAccount;
+import com.jamesorban.javafxprojectminesweeper.models.DbConnection;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.scene.control.Button;
@@ -21,7 +21,7 @@ public class UserController {
     System.out.println(name.getText());
     System.out.println(email.getText());
     System.out.println(password.getText());
-    UserAccount.writeToDatabase(name.getText(), email.getText(), password.getText());
+    DbConnection.writeToDatabase(name.getText(), email.getText(), password.getText());
  }
 
 }
