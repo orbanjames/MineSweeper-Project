@@ -11,7 +11,7 @@ public class ButtonController {
     private Button cancelButton;
 
     @FXML
-        // This method is called by the FXMLLoader when initialization is complete
+        // This method will be called by the FXMLLoader when initialization is complete
     void initialize() {
 
         assert cancelButton != null : "fx:id=\"cancelButton\" was not injected: check your FXML file 'BoardView.fxml'.";

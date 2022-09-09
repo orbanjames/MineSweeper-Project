@@ -113,7 +113,7 @@ public class MineSweeperModel {
 
     }
 
-    // ************** inner class point **************//
+    // ************ inner class point ************//
 
     public class Point {
 

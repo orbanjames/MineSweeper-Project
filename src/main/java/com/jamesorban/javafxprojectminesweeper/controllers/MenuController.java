@@ -15,7 +15,7 @@ import javafx.stage.Stage;
 public class MenuController {
 
 
-    @FXML // ResourceBundle that was given to the FXMLLoader
+    @FXML // ResourceBundle for the FXMLLoader
     private ResourceBundle resources;
 
     @FXML // URL location of the FXML file that was given to the FXMLLoader

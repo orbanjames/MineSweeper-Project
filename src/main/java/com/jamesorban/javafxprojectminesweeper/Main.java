@@ -71,7 +71,7 @@ public class Main extends Application {
         txtHeight = menuController.getTxtHeight();
         txtMines = menuController.getTxtMines();
 
-        GridPane gloabalGrid = menuController.getGlobalGrid();
+        GridPane globalGrid = menuController.getGlobalGrid();
         boardGrid = menuController.getBoardGrid();
         Pane topPane = menuController.getDataPane();
 

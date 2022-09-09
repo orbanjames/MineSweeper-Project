@@ -80,8 +80,8 @@ public class ScoreModel implements Serializable {
     }
 
     /**
-     * Makes a string of the top scores
-     * @return String of top scores
+      Makes a string of the top scores
+      @return String of top scores
      */
     public String toString() {
         if (scoreList.size()==0) return "(none)";

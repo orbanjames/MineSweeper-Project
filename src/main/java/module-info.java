@@ -1,3 +1,4 @@
+
 module com.jamesorban.javafxprojectminesweeper {
     requires javafx.controls;
     requires javafx.fxml;

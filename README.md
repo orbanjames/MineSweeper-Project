@@ -11,7 +11,7 @@ To play the game, you need to choose from the board (beginner, intermediate, or 
 
 To start the Game/application, right-click on the Main Class and the select the Run 'Main-main()' and the Game main board will display on your desktop, thereafter, set the height, the width and the number of mines according to your preferred size of the rectangular game board, which also shows how simple or hard the game will be. the more the number of mines reset, the difficult  the game is to win.
 
-
+![](main board.png)
 
 
 
